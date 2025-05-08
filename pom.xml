@@ -12,6 +12,7 @@
         <module>spring6-ioc-annotation</module>
         <module>Spring6-reflect</module>
         <module>atguigu_spring</module>
+        <module>Spring6_xml_bean</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
