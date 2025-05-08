@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--开启组件扫描-->
+<!--    <context:component-scan base-package="org.example">-->
+<!--    </context:component-scan>-->
+</beans>
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:util="http://www.springframework.org/schema/util"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xmlns:p="http://www.springframework.org/schema/beans/p"-->
+<!--       xsi:schemaLocation="-->
+<!--       http://www.springframework.org/schema/context-->
+<!--       http://www.springframework.org/schema/context/spring-context.xsd-->
+<!--       http://www.springframework.org/schema/util-->
+<!--       http://www.springframework.org/schema/util/spring-util.xsd-->
+<!--       http://www.springframework.org/schema/beans-->
+<!--        http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+
+    <!--    <bean class="com.baeldung.springbootxml.Pojo">-->
+    <!--        <property name="field" value="sample-value"></property>-->
+    <!--    </bean>-->
+    <!-- set构造方法-->
+<!--    <bean id="App" class="org.example.App"></bean>-->
+<!--    <bean id="book" class="org.example.di.Book">-->
+<!--        <property name="author" value="jason"/>-->
+<!--        <property name="bname" value="java"></property>-->
+<!--        &lt;!&ndash;        <property name="others">&ndash;&gt;-->
+<!--        &lt;!&ndash;            <null></null>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </property>&ndash;&gt;-->
+<!--    </bean>-->
+<!--    &lt;!&ndash; 构造器构造方法&ndash;&gt;-->
+<!--    <bean id="bookcon" class="org.example.di.Book">-->
+<!--        <constructor-arg name="bname" value="java"></constructor-arg>-->
+<!--        <constructor-arg name="author" value="jason"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>-->
+
+<!--</beans>-->
