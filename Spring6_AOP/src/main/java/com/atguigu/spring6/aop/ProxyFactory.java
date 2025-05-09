@@ -12,7 +12,7 @@ public class ProxyFactory {
         this.target = target;
     }
 
-    //* Proxy.newProxyInstance()方法
+    // Proxy.newProxyInstance()方法
     //有三个参数
     //第一个参数:ClassLoader:加载动态生成代理类的类加载器
     //第二个参数:Class[]interfaces:目录对象实现的所有接口的class类型数组
@@ -22,9 +22,9 @@ public class ProxyFactory {
         ClassLoader classLoader = target.getClass().getClassLoader();
         Class<?>[] interfaces = target.getClass().getInterfaces();
         InvocationHandler invocationHandler = new InvocationHandler() {
-            //            第一个参数
-//            第二个参数 Method method:正在执行的方法
-//            第三个参数 Object[] args:执行方法参数
+            // 第一个参数
+            // 第二个参数 Method method:正在执行的方法
+            // 第三个参数 Object[] args:执行方法参数
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 System.out.println("[动态代理][日志]..." + method.getName() + "参数：" + Arrays.toString(args));

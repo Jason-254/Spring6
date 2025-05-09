@@ -12,6 +12,8 @@
         <module>spring6-ioc-annotation</module>
         <module>Spring6-reflect</module>
         <module>atguigu_spring</module>
+        <module>Spring6_xml_bean</module>
+        <module>Spring6_first</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,6 +34,17 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.6.3</version>
+        </dependency>
+        <!--log4j2的依赖-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>2.19.0</version>
         </dependency>
 
     </dependencies>

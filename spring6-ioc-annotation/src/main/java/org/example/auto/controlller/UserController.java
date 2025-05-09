@@ -20,9 +20,10 @@ public class UserController {
 //    }
 
 
-//    构造方法注入
-private UserService userService;
-@Autowired
+    //    构造方法注入
+    private UserService userService;
+
+    @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
