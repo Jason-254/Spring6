@@ -2,7 +2,6 @@ package org.example.auto.service;
 
 import org.example.auto.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -8,6 +8,13 @@ public class CalclulatorStaticProxy implements Calculator {
         this.calculator = calculator;
     }
 
+    public static void main(String[] args) {
+        Calculator calculator = new CalculatorImpl();
+        CalclulatorStaticProxy calclulatorStaticProxy = new CalclulatorStaticProxy(calculator);
+        calclulatorStaticProxy.add(1, 2);
+        calclulatorStaticProxy.sub(1, 2);
+    }
+
     @Override
     public int add(int a, int b) {
 
@@ -42,12 +49,5 @@ public class CalclulatorStaticProxy implements Calculator {
         System.out.println("[日志] add 方法结束是:" + addResult);
         return addResult;
 
-    }
-
-    public static void main(String[] args) {
-        Calculator calculator = new CalculatorImpl();
-        CalclulatorStaticProxy calclulatorStaticProxy = new CalclulatorStaticProxy(calculator);
-        calclulatorStaticProxy.add(1, 2);
-        calclulatorStaticProxy.sub(1, 2);
     }
 }
