@@ -14,6 +14,8 @@
         <module>atguigu_spring</module>
         <module>Spring6_xml_bean</module>
         <module>Spring6_first</module>
+        <module>Spring6_JUnit5</module>
+        <module>spring-jdbc-tx</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

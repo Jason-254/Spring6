@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    &lt;!&ndash;    依赖注入之 setter 注入&ndash;&gt;-->
+    <!--    <bean id="studentOne" class="Student">-->
+    <!--        &lt;!&ndash; property标签：通过组件类的setXxx()方法给组件对象设置属性 &ndash;&gt;-->
+    <!--        &lt;!&ndash; name属性：指定属性名（这个属性名是getXxx()、setXxx()方法定义的，和成员变量无关） &ndash;&gt;-->
+    <!--        &lt;!&ndash; value属性：指定属性值 &ndash;&gt;-->
+    <!--        <property name="id" value="1001"/>-->
+    <!--        <property name="name" value="张三"/>-->
+    <!--        <property name="age" value="23"></property>-->
+    <!--        <property name="sex" value="男"></property>-->
+    <!--    </bean>-->
+
+    <!--    实验三：依赖注入之构造器注入-->
+    <bean id="studentTwo" class="Student">
+        <constructor-arg value="1002"></constructor-arg>
+        <constructor-arg value="李四"></constructor-arg>
+        <constructor-arg value="33"></constructor-arg>
+        <constructor-arg value="女"></constructor-arg>
+    </bean>
+
+</beans>

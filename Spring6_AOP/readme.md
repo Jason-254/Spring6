@@ -56,3 +56,71 @@ public class ProxyFactory {
 }
 
 ```
+
+- 前置通知：使用@Before 注解标识，在被代理的目标方法 **前** 执行
+- 返回通知：使用@AfterReturning 注解标识，在被代理的目标方法 **成功结束** 后执行（**寿终正寝**）
+- 异常通知：使用@AfterThrowing 注解标识，在被代理的目标方法 **异常结束** 后执行（**死于非命**）
+- 后置通知：使用@After 注解标识，在被代理的目标方法 **最终结束** 后执行（**盖棺定论**）
+- 环绕通知：使用@Around 注解标识，使用 try...catch...finally 结构围绕 **整个** 被代理的目标方法，包括上面四种通知对应的所有位置
+#### 各种通知
+
+- 前置通知：使用@Before 注解标识，在被代理的目标方法 **前** 执行
+- 返回通知：使用@AfterReturning 注解标识，在被代理的目标方法 **成功结束** 后执行（**寿终正寝**）
+- 异常通知：使用@AfterThrowing 注解标识，在被代理的目标方法 **异常结束** 后执行（**死于非命**）
+- 后置通知：使用@After 注解标识，在被代理的目标方法 **最终结束** 后执行（**盖棺定论**）
+- 环绕通知：使用@Around 注解标识，使用 try...catch...finally 结构围绕 **整个** 被代理的目标方法，包括上面四种通知对应的所有位置
+
+ 语法细节**
+
+- 用*号代替“权限修饰符”和“返回值”部分表示“权限修饰符”和“返回值”不限
+- 在包名的部分，一个“*”号只能代表包的层次结构中的一层，表示这一层是任意的。
+  - 例如：*.Hello 匹配 com.Hello，不匹配 com.atguigu.Hello
+- 在包名的部分，使用“*..”表示包名任意、包的层次深度任意
+- 在类名的部分，类名部分整体用*号代替，表示类名任意
+- 在类名的部分，可以使用*号代替类名的一部分
+  - 例如：*Service 匹配所有名称以 Service 结尾的类或接口
+
+- 在方法名部分，可以使用*号表示方法名任意
+- 在方法名部分，可以使用*号代替方法名的一部分
+  - 例如：*Operation 匹配所有方法名以 Operation 结尾的方法
+
+- 在方法参数列表部分，使用(..)表示参数列表任意
+- 在方法参数列表部分，使用(int,..)表示参数列表以一个 int 类型的参数开头
+- 在方法参数列表部分，基本数据类型和对应的包装类型是不一样的
+  - 切入点表达式中使用 int 和实际方法中 Integer 是不匹配的
+- 在方法返回值部分，如果想要明确指定一个返回值类型，那么必须同时写明权限修饰符
+  - 例如：execution(public int *..* Service.*(.., int))	正确
+    例如：execution(* int *..*Service.*(.., int))	错误
+![img_1.png](img_1.png)
+# 重用切入点表达式
+在同一个切面中使用
+```java
+@Before("pointCut()")
+public void beforeMethod(JoinPoint joinPoint){
+    String methodName = joinPoint.getSignature().getName();
+    String args = Arrays.toString(joinPoint.getArgs());
+    System.out.println("Logger-->前置通知，方法名："+methodName+"，参数："+args);
+}
+```
+        
+在不同切面中使用
+```java
+
+@Before("com.atguigu.aop.CommonPointCut.pointCut()")
+public void beforeMethod(JoinPoint joinPoint){
+    String methodName = joinPoint.getSignature().getName();
+    String args = Arrays.toString(joinPoint.getArgs());
+    System.out.println("Logger-->前置通知，方法名："+methodName+"，参数："+args);
+}
+@After("com.atguigu.aop.CommonPointCut.pointCut()")
+```
+# 切面的优先级
+相同目标方法上同时存在多个切面时，切面的优先级控制切面的 **内外嵌套** 顺序。
+
+- 优先级高的切面：外面
+- 优先级低的切面：里面
+
+使用@Order 注解可以控制切面的优先级：
+
+- @Order(较小的数)：优先级高
+- @Order(较大的数)：优先级低

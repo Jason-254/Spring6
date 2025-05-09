@@ -1,5 +1,7 @@
 package com.atguigu.spring6.aop;
 
+import org.springframework.stereotype.Component;
+@Component
 public class CalculatorImpl implements Calculator {
 
     @Override

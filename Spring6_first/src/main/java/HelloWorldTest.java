@@ -14,4 +14,20 @@ public class HelloWorldTest {
         helloworld.sayHello();
         logger.info("执行成功");
     }
+
+
+//    @Test
+//    public void testDIBySet() {
+//        ApplicationContext ac = new ClassPathXmlApplicationContext("beans-di.xml");
+//        Student studentOne = ac.getBean("studentOne", Student.class);
+//        System.out.println(studentOne);
+//    }
+
+    @Test
+    public void testDIByConstructor() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("beans-di.xml");
+        Student studentOne = ac.getBean("studentTwo", Student.class);
+        System.out.println(studentOne);
+    }
+
 }

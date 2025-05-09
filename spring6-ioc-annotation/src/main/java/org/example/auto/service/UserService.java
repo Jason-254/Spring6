@@ -1,4 +1,5 @@
 package org.example.auto.service;
+
 import org.springframework.stereotype.Service;
 
 @Service

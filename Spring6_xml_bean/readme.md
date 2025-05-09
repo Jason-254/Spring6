@@ -128,7 +128,7 @@ CDATA节
     <property name="bname" value="安保部"></property>
 
 </bean>
-<bean id="emp" class="org.example.di.Emp">
+<bean id="emp" class="org.example.di.com.atguigu.Emp">
     <!--普通类型注入-->
     <property name="ename" value="lucky"></property>
     <property name="eage" value="50"></property>
@@ -143,7 +143,7 @@ CDATA节
 ```java
 <!--  1 创建对象-->
 <!--  2 在bean 标签中里面使用property 引入对象-->
-<bean id="emp" class="org.example.di.Emp">
+<bean id="emp" class="org.example.di.com.atguigu.Emp">
     <!--普通类型注入-->
     <property name="ename" value="lucky"></property>
     <property name="eage" value="50"></property>
@@ -162,7 +162,7 @@ CDATA节
     <property name="bname" value="安保部"></property>
 
 </bean>
-<bean id="emp" class="org.example.di.Emp">
+<bean id="emp" class="org.example.di.com.atguigu.Emp">
     <!--普通类型注入-->
     <property name="ename" value="lucky"></property>
     <property name="eage" value="50"></property>
@@ -180,7 +180,7 @@ CDATA节
 <bean id="dept" class="org.example.di.Dept">
     <property name="bname" value="安保部"></property>
 </bean>
-<bean id="emp" class="org.example.di.Emp">
+<bean id="emp" class="org.example.di.com.atguigu.Emp">
     <!--普通类型注入-->
     <property name="ename" value="lucky"></property>
     <property name="eage" value="50"></property>
@@ -200,7 +200,7 @@ CDATA节
 ## 对象数组的注入
 
 ```java
-<bean id="empone" class="org.example.di.Emp">
+<bean id="empone" class="org.example.di.com.atguigu.Emp">
     <!--普通类型注入-->
     <property name="ename" value="lucky"></property>
     <property name="eage" value="50"></property>
@@ -208,7 +208,7 @@ CDATA节
     <property name="dept" ref="dept"></property>
 
 </bean>
-<bean id="emptwo" class="org.example.di.Emp">
+<bean id="emptwo" class="org.example.di.com.atguigu.Emp">
     <!--普通类型注入-->
     <property name="ename" value="lucky"></property>
     <property name="eage" value="50"></property>
@@ -264,7 +264,7 @@ CDATA节
 
 
 
-    <bean id="teacherone" class="org.example.di.Emp">
+    <bean id="teacherone" class="org.example.di.com.atguigu.Emp">
         <!--普通类型注入-->
         <property name="ename" value="lucky"></property>
         <property name="eage" value="50"></property>
@@ -298,7 +298,7 @@ CDATA节
     <entry key="10010" value-ref="teacher"/>
 </util:map  >
 
-<bean id="teacherone" class="org.example.di.Emp" p:sid="100" p:name ="mary" p:lesson="lessonlist" p:map="teacher">
+<bean id="teacherone" class="org.example.di.com.atguigu.Emp" p:sid="100" p:name ="mary" p:lesson="lessonlist" p:map="teacher">
 </bean>
 ```
 
